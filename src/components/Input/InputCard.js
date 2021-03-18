@@ -34,8 +34,8 @@ export default function InputCard({ setOpen, listId, type }) {
   const handleBtnConfirm = () => {
     if (type === 'card') {
       addMoreCard(title, listId);
-      setTitle('');
       setOpen(false);
+      setTitle('');
     } else {
       addMoreList(title);
       setTitle('');
