@@ -4,7 +4,7 @@ import React from 'react'
 
 const useStyle = makeStyles((theme) => ({
     AppBar: {
-      background:"green"
+      background:"transparent"
     },
     title:{
         flexGrow:1
