@@ -2,7 +2,7 @@ import React, { useState,useContext } from 'react';
 import { Typography, InputBase } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import StoreApi from '../../utils/storeApi';
+import {StoreContext} from '../../utils/storeApi';
 
 const useStyle = makeStyles((theme) => ({
   editableTitleContainer: {
@@ -26,7 +26,7 @@ const useStyle = makeStyles((theme) => ({
 export default function Title({ title ,listId }) {
   const [open, setOpen] = useState(false);
   const [newTitle,setNewTitle] = useState(title);
-  const {updateListTitle} = useContext(StoreApi);
+  const {updateListTitle} = useContext(StoreContext);
   const classes = useStyle();
   const handleOnChange=(e)=>{
     setNewTitle(e.target.value);
