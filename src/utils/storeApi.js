@@ -2,6 +2,8 @@ import React ,{useState}from 'react';
 import { v4 as uuid } from 'uuid';
 import store from '../utils/store';
 
+// api request goes here
+
 
 export const StoreContext = React.createContext(null);
 
@@ -9,7 +11,7 @@ export const StoreContext = React.createContext(null);
 export  const StoreProvider = (props)=>{
 
     const [data, setData] = useState(store);
-    
+    const [userToken,setUserToken]=useState("asda");
     
     const addMoreCard = (title, listId) => {
         console.log(title, listId);
@@ -68,7 +70,7 @@ export  const StoreProvider = (props)=>{
       }
     
     return(
-        <StoreContext.Provider value={{ addMoreCard, addMoreList,updateListTitle,data,setNewData}}>
+        <StoreContext.Provider value={{ addMoreCard, addMoreList,updateListTitle,data,setNewData,userToken}}>
             {props.children}
             </StoreContext.Provider>
     );
