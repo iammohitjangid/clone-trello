@@ -3,6 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
+import {NavLink} from "react-router-dom";
 
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
@@ -15,9 +16,9 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
+      <NavLink color="inherit" to="/">
+        Home
+      </NavLink>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>

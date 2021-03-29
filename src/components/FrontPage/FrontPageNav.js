@@ -3,6 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import { useHistory } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+
 
 const IMG_PATH="https://brandeps.com/logo-download/T/Trello-logo-vector-01.svg";
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +37,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Front() {
     const classes = useStyles();
+    const history = useHistory();
+
 
     return (
         <div className={classes.root}>
@@ -47,8 +52,22 @@ export default function Front() {
                  <img src={IMG_PATH} alt="logo" className={classes.logo} />
             </Toolbar>
             
-            <Button  variant="contained" color="inherit" className={classes.Btn}>Log in</Button>
-            <Button variant="contained"  style={{backgroundColor:"#57A641"}}  className={classes.Btn}><b style={{color:"white"}}>Sign Up</b></Button>
+            <Button 
+               variant="contained"
+               color="inherit"
+               className={classes.Btn} 
+               onClick={()=>( history.push("/login"))}
+              >Log in
+              </Button>
+            <Button
+             variant="contained"  
+             style={{backgroundColor:"#57A641"}}  
+             className={classes.Btn}
+             onClick={()=>( history.push("/signup"))}
+             >
+               <b style={{color:"white"}}>
+                 Sign Up</b>
+                 </Button>
           </Toolbar>
         </AppBar>
       </div>

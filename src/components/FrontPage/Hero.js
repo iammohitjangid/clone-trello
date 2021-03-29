@@ -4,8 +4,7 @@ import Box from '@material-ui/core/Box';
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid/Grid";
 import Typography from '@material-ui/core/Typography';
-import SignUp from "../FrontPage/AuthPages/SignUp";
-import LogIn from "../FrontPage/AuthPages/LogIn";
+
 
 const IMG_PATH2="https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/spirit/hero/6a3ccd8e5c9a0e8ebea4235d12da6b24/hero.png";
 
@@ -50,16 +49,16 @@ export default function Hero() {
              direction="row"
              justify="center"
              alignItems="center" >  
-                <Grid item xs={6} className={classes.grid} > 
+                <Grid item sm={6} xs={12} className={classes.grid} > 
                 <Box my={10} className={classes.content}  >
                      <Typography variant="h1" className={classes.heroh1}>
                      Trello helps teams move work forward.
                      </Typography>
-                     <Typography variant="p" className={classes.herop}>
+                     <Typography variant="subtitle1" className={classes.herop}>
                      Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique—accomplish it all with Trello.                     </Typography>
                 </Box>
                 </Grid>
-                <Grid item xs={6}> 
+                <Grid item sm={6} xs={12}> 
                 <Box my={10} className={classes.contentImg} >
                     <img src={IMG_PATH2} className={classes.img2}/>
                 </Box>
@@ -71,3 +70,6 @@ export default function Hero() {
         
     )
 }
+
+
+

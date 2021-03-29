@@ -11,7 +11,7 @@ export const StoreContext = React.createContext(null);
 export  const StoreProvider = (props)=>{
 
     const [data, setData] = useState(store);
-    const [userToken,setUserToken]=useState("asda");
+    const [userToken,setUserToken]=useState(null);
     
     const addMoreCard = (title, listId) => {
         console.log(title, listId);
